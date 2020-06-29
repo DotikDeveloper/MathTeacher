@@ -8,7 +8,8 @@ $light-green: #b8ceca;
 $white: #fff;
 $white_opacity: #ffffff27;
 $red: #c51e34; // end colors
-// mixin // @include fontz(80px,green);
+
+// mixin // @include fontz(80px,green,300);
 @mixin font($f, $c, $w) {
     font-size: $f;
     color: $c;
@@ -33,6 +34,7 @@ header,
 .intro-2 {
     background: url("../media/img/bg_woman.webp") no-repeat center center;
     background-size: cover;
+
     @media only screen and (max-width: 992px) {
         background: url("../media/img/bg_woman.webp") no-repeat left top;
         background-size: cover;
@@ -130,13 +132,16 @@ header,
 }
 
 .navbar {
+
     // .navbar__brand
     &__brand {
         font-family: "Vidaloka", serif;
     }
+
     // .navbar__tel
     &__tel {
         @include font(1.5rem, $white, bold);
+
         &:hover {
             @include font(1.5rem, $red, bold);
             opacity: 0.8;
@@ -147,9 +152,11 @@ header,
 .navbar.navbar-dark .navbar-nav .nav-item .nav-link {
     @include font(0.8rem, $white, bold);
     text-transform: uppercase;
+
     &:focus {
         background-color: $white_opacity;
     }
+
     &:hover {
         color: $red;
     }
@@ -158,12 +165,15 @@ header,
 // end navbar
 // .view header
 .view {
+
     // view__content
     &__content {
         @media only screen and (max-width: 992px) {
             margin-left: 25px;
         }
-    } // .view__profession
+    }
+
+    // .view__profession
     &__profession {
         font-style: normal;
         font-weight: 300;
@@ -175,11 +185,13 @@ header,
         letter-spacing: 1.5em;
         text-transform: uppercase;
         color: #ebe4e4;
+
         @media only screen and (max-width: 992px) {
             margin-top: 70px;
             font-size: 0.8em;
         }
     }
+
     // .view__name
     &__name {
         font-style: normal;
@@ -191,6 +203,7 @@ header,
         letter-spacing: -0.015em;
         text-transform: uppercase;
         color: rgba(235, 228, 228, 0.85);
+
         @media only screen and (max-width: 992px) {
             font-size: 2em;
             line-height: 1.8em;
@@ -199,17 +212,24 @@ header,
             letter-spacing: -0.015em;
         }
     }
+
     // .view__h6
     &__h6 {
         color: rgba(235, 228, 228, 0.85);
     }
+
     // .view__button
     &__button.btn-outline.btn {
-        //box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2) !important;
+        //color: #fff;
         margin: 50px 0px auto;
         border: 2px solid $white;
-        border-radius: 50px;
-        @include font(1.2rem, $white, bold);
+        border-radius: 15px;
+        @include fontz(18px, $white, bold);
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+
         &:hover {
             //box-shadow: none;
             border: 2px solid $red;
@@ -231,6 +251,6 @@ section {
 
 // About
 
-.about__text{
+.about__text {
     font-size: 14px;
 }
