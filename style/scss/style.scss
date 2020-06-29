@@ -219,6 +219,7 @@ header,
 }
 
 // end .view header
+
 // main
 main.container {
     padding: auto 0;
@@ -226,4 +227,10 @@ main.container {
 
 section {
     min-height: 100vh;
+}
+
+// About
+
+.about__text{
+    font-size: 14px;
 }
